@@ -1,0 +1,25 @@
+package hackBCA;
+
+import java.awt.Color;
+import javax.swing.JFrame;
+
+public class SystemPanel extends JFrame {
+	private final static int HEIGHT = 700;
+	private final static int WIDTH = 450;
+	private Planet x;
+	
+	public SystemPanel() {
+		setSize(HEIGHT,WIDTH);
+		setTitle("Planetary Sim");
+		setBackground(Color.BLACK);
+		x = new Planet(this);
+		add(x);
+		setResizable(false);
+		setVisible(true);
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
+	}
+
+	public static void main(String[] args) {
+		new SystemPanel();
+	}
+}
